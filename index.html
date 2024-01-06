@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="./mainStyle.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1 class="h1"></h1>
+
+            <div class="progress">
+                <div class="progressText">
+                    <div class="progressName">Прогресс</div>
+                    <div class="progressPercent"></div>
+                </div>
+                <div class="progressBar">
+                    <div class="progressCoverBar"></div>
+                </div>
+            </div>
+        </header>
+
+        <aside>
+            <div class="logo">
+                <img src="./data/images/logoSite.svg" />
+            </div>
+
+            <nav>
+                <div class="collectionHabits"></div>
+
+                <button class="functionButtons" onclick="isShowPopup()">
+                    <img src="./data/images/add.svg"/>
+                </button>
+
+                <button class="functionButtons" onclick="delateAllHabbits()">
+                    <img style=" transform: rotate(45deg)" src="./data/images/add.svg"/>
+                </button>
+            </nav>
+        </aside>
+
+        <main>
+            <div id="days"></div>
+
+            <div class="habbit">
+                <div class="habbitDay"></div>
+                <form class="habbitForm" onsubmit="addDays(event)">
+                    <input name="comment" type="text" placeholder="Комментарий" />
+                    <img src="./data/images/comment.svg"/>
+                    <button class="completeInput" type="submit">Готово</button>
+                </form>
+            </div>
+        </main>
+
+        <div class="cover">
+            <div class="popup">
+                <h2>Новая привычка</h2>
+                <div class="iconLabel">Иконка</div>
+                <div class="iconSelect">
+                    <button class="habbitIco" onclick="selectionIco(this, 'sport')">
+                        <img src="./data/images/sport.svg">
+                    </button>
+
+                    <button class="habbitIco" onclick="selectionIco(this, 'water')">
+                        <img src="./data/images/water.svg">
+                    </button>
+
+                    <button class="habbitIco" onclick="selectionIco(this, 'food')">
+                        <img src="./data/images/food.svg">
+                    </button>
+                </div>
+                <form class="popupForm" onsubmit="addHabbit(event)">
+                    <input type="text" name="name" placeholder="Название">
+                    <input type="number" name="target" placeholder="Количество дней прививания привычки">
+                    <button class="completeInput" type="submit">Добавить</button>
+                </form>
+                
+                <button class="popupClose" onclick="isShowPopup()">
+                    <img src="./data/images/cross.svg">
+                </button>
+            </div>
+        </div>
+
+        <script src="./scripts/app.js"></script>
+    </body>
+</html>

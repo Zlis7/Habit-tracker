@@ -1,0 +1,251 @@
+@font-face {
+    font-family: "Comfortaa";
+    src: url(./data/fonts/Comfortaa/Comfortaa.ttf)
+}
+
+body {
+    font-family: "Comfortaa";
+    margin: 0;
+    padding: 0;
+    background-color: #F3F6FD;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 30px;
+    color: black;
+}
+h2{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 27px;
+}
+
+:hover {
+    transition: all 0.2s linear 0.1s;
+}
+
+header {
+    position: absolute;
+    margin-left: 130px;
+    padding-left: 50px;
+    height: 80px;
+    min-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.progress {
+    display: flex;
+    flex-direction: column;
+    min-width: 235px;
+    gap: 12px;
+}
+.progressText {
+    display: flex;
+    justify-content: space-between;
+}
+.progressName {
+    font-size: 14px;
+    line-height: 16px;
+    color: #232360;
+}
+.progressPercent {
+    font-size: 12px;
+    line-height: 13px;
+    color: #768396;
+}
+.progressBar, .progressCoverBar {
+    position: relative;
+    width: 100%;
+    background: #E6E9ED;
+    border-radius: 5px;
+    height: 5px;
+}
+.progressCoverBar {
+    width: 0%;
+    transition: all 1s;
+    position: absolute;
+    background: #5051F9;
+}
+
+aside {
+    position: absolute;
+    background-color: white;
+    width: 130px;
+    min-height: 100vh;
+    float: left;
+}
+nav, .collectionHabits{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+.logo {
+    position: relative;
+    top: 30px;
+    left: 30px;
+    width: 66px;
+    height: 71px;
+    margin-bottom: 66px;
+}
+.habbitIco, .activeIco, .functionButtons{
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 14px;
+    box-shadow: 0px 0px 14px #CAD5FF;
+    background-color: white;
+    cursor: pointer;
+}
+.activeIco, .habbitIco:hover {
+    background: #6A6AFB;
+}
+.activeIco img, .habbitIco:hover img{
+    filter: brightness(0) invert(1);
+}
+.functionButtons {
+    background: none;
+    border: 1px solid #CAD5FF;
+    box-shadow: none;
+}
+
+main {
+    position: absolute;
+    margin-left: 130px;
+    margin-top: 80px;
+    padding-top: 35px;
+    padding-left: 50px;
+    min-width:900px;
+}
+.habbit{
+    border-radius:10px;
+    background:white;
+    display:flex;
+    align-items:center;
+    margin-bottom: 12px;
+    
+}
+.habbitDay{
+    background:#FBFAFF;
+    border-radius: 10px 0 0 10px;
+    border-right: 1px solid #E7EBFB;
+    font-size:14px;
+    line-height:16px;
+    padding: 20px 40px;
+    min-width: 150px;
+}
+.habbitComment {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 20px 25px;
+}
+.habbitDelete{
+    margin-left:auto;
+    margin-right: 10px;
+    background:none;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+}
+.habbitDelete:hover{
+    background:#EFF2FF;
+}
+.habbitForm{
+    display:flex;
+    gap: 25px;
+    width: 100%;
+    padding: 0px 10px 0px 25px;
+    position:relative;
+}
+.habbitForm input, .popupForm input {
+    font-family: "Comfortaa";
+    background: white;
+    border: 1px solid #E7EBF8;
+    border-radius: 10px;
+    padding: 12px 20px;
+    flex: 1;
+    font-size:14px;
+    line-height:16px;
+    padding-left: 25px;
+}
+.habbitForm input::placeholder{
+    color:#BB99A8;
+}
+input.error{
+    border: 1px solid red;
+}
+.habbitForm img{
+    position:absolute;
+    top:11px;
+    left:30px;
+}
+.completeInput {
+    font-family: "Comfortaa";
+    background: #EDECFE;
+    border-radius: 10px;
+    border: none;
+    font-size: 13px;
+    line-height: 14px;
+    color: #5051F9;
+    padding: 14px 30px;
+    cursor: pointer;
+}
+.completeInput:hover{
+    background: #DCDAFF;
+}
+
+.cover{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top:0;
+    background: rgba(0, 0, 0, 0.25);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.popup{
+    background: white;
+    box-shadow: 0px 8px 14px 12px rgba(56,56,56,0.05);
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.popupClose{
+    position: absolute;
+    right: 15px;
+    top:15px;
+    border:none;
+    background: none;
+    cursor: pointer;
+}
+.iconLabel{
+    font-size: 14px;
+    line-height: 16px;
+    color: #768396;
+    margin-bottom: 10px;
+}
+.iconSelect{
+    display: flex;
+    gap:35px;
+    margin-bottom: 20px;
+}
+.popupForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.popupForm input{
+    width:95%;
+}
