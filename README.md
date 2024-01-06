@@ -1,2 +1,1 @@
-# Habit-tracker
-Домашняя работа по курсу
+# https://zlis7.github.io/Habit-tracker/
